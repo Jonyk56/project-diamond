@@ -1,0 +1,539 @@
+# Programming language concept by William W Wold
+# This is not ment to be actual code, just a place to exparament with different ideas of how the language might look
+
+add={a=$ b=$ a+b}
+
+a=7
+b=3
+
+z={sqrt(@)_}
+
+add=z
+
+add(&w &x w+x}, b)
+
+b==3?
+	print("yes")
+:b==4?
+	print("4")
+:{
+	print(z)
+	add()
+}
+
+print(add(a))
+
+max=
+{
+	a,b,c=$
+	a>b && a>c? a
+	: b>c? b
+	: c
+}
+
+max=
+{
+	a,b=$
+	a>b?a:b
+}
+
+
+max: a, b, c
+
+print: "hello world, the numer is " 7
+
+a>b?a,b
+
+car.drive
+
+"hello world".print
+
+7,5.max
+
+b:7
+g:9.81
+
+str:"hello world"
+
+zero:Int
+
+___________________________________________________
+
+
+max$:
+{
+	Int: z
+	
+	>.z
+}
+
+$func:
+{
+	a,b:$(Dub, Dub)
+}
+
+func:
+{
+	a:tru
+	b:fls
+	
+	a?
+	(
+		print: "hello"
+		9
+	),(
+	
+	b? print: "world"
+	
+	7)
+}
+
+func: (a: Int, b: Int):
+{
+	a>b?
+		a+=3,
+		~b
+	
+	i: 0, i<6, i++ @
+	(
+		b--
+		
+		b<0?
+			~7
+	)
+}
+
+___________________________________________________
+
+
+in: {Int, Int}
+funcs: {Dub, Dub}, {Int, Bool}
+out: error? #1?
+
+in: {Int, Int}
+funcs: {Dub, Int}, {Int, Dub}
+out: error because tie
+
+in: {Int, Int}
+funcs: {Int, Bool}, {Dub, Bool}
+out: #1
+
+in: {Int, Dub}
+funcs: {Int, Int}, {Dub, Dub}
+out: #2
+
+in: {Bool, Bool}
+funcs: {Int, Int}, {Dub, Dub}
+out: error because tie (only cares if more or less complex, not how much)
+
+___________________________________________________
+
+
+max: {a: Int, b: Int}:
+	~a>b?a|b
+
+i: 0..8@
+(
+	
+)
+
+(i=0; i<b; ++i)
+{
+	
+}
+
+___________________________________________________
+
+________
+_ ______
+_ _  ___
+4+a: 5+3
+
+     |
+    / \
+   / / \
+  / /  /\
+ / /  / /\
+4+a: 5+b: 3
+
+___________________________________________________
+
+
+a: 1 | a<100 | a++ @
+(
+	
+)
+
+func: {}|&Int.{}:
+(
+	#do stuff
+)
+
+
+atan2: $Dub|{y: Dub, x: Dub}.
+[
+	
+]
+
+
+
+ang: (4, 5).atan2
+
+
+atan2: {y: Dub; x: Dub}
+[
+	
+]
+
+___________________________________________________
+
+
+a[b]
+
+(a: (b))
+
+i: 100
+
+___________________________________________________
+
+
+funcName:
+{
+	^Int
+	a: Dub
+	b: Dub
+}[
+	i: 10
+	
+	(
+		j: 20
+		^j
+	)
+	
+	(
+		j: 7
+		^j
+	)
+]
+
+doStuff: {me: String}
+[
+	val: Int: me
+	
+	val+: a
+	
+	^val
+]
+
+___________________________________________________
+
+
+a: 8
+
+a: 12
+
+b: a
+
+c: {a: Int}
+[
+	c=0 ?
+		~0
+	|
+		~c-1
+]
+
+a: 2 + c: 3+4
+
+___________________________________________________
+
+
+if a
+(
+	# code
+)
+else
+(	
+	#[
+		this is a block comment
+	#]
+)
+
+___________________________________________________
+
+
+a: tru
+b: 9
+
+while a=tru
+(
+	b-:1
+	
+	if b<0
+		a: fls
+)
+
+5-3-2
+
+a: b: c
+
+___________________________________________________
+
+
+print: a	# works because a is defined below
+a:: 8		# constant
+a: 7		# compile error
+
+print: b	# compile error
+$b: 8		# variable
+b: 7 		# works
+
+print: c	# compile error
+$c:: 8		# immutable
+c: 7		# compile error
+
+
+myFunc :: {val1: Int; val2: Int}
+[
+	
+]
+
+___________________________________________________
+
+
+\+ :: {Int} < {a: Int}.{b: Int}
+[
+	a+b^
+]
+
+func :: {me: Int | a: Dub} > {Int}
+[
+	
+]
+
+func :: {me: Int}.{a: Dub} > {Int}
+[
+	
+]
+
+___________________________________________________
+
+\\
+this
+is
+block
+comment
+//
+
+
+//
+this
+is
+block
+comment
+\\
+
+\\ it looks great on one line too //
+
+___________________________________________________
+
+
+BaseClass ::
+{
+	foo: Dub
+}
+
+MyObj ::
+{
+	$super: BaseClass
+	a: Int
+	b: Int
+}
+
+MyObj :: {} > {MyObj}:
+(
+	return: (9.3), 8, 12
+)
+
+addToBoth :: {$me: MyObj}.{}:
+(
+	a+: 1
+	b+: 1
+	foo
+)
+
+myPrint: tru, 12, 8.9
+
+obj: MyObj
+
+obj.addToBoth
+
+___________________________________________________
+
+
+a: b: 7-1-1
+
+  :
+ / \
+a   :
+   / \
+  b   -
+	 / \
+	-   1
+   / \
+  7   1
+
+
+___________________________________________________
+
+a: {}
+a.b: 8
+a.c: "hello"
+
+a . getString :: {}
+[
+	c + " " + b
+]
+
+
+MyClass: {}
+[
+	me.name: "William"
+	me.age: 19
+	
+	me
+]
+
+getString: {MyClass}.{}
+[
+	name + " is " + age + " years old."
+]
+
+person: MyClass
+
+print: person.getString
+
+	> William is 19 years old
+
+___________________________________________________
+
+
+print "hello"
+
+myFunc 8?
+	print "yes"
+	|
+	print "no"
+
+myFunc {Int}
+[
+	
+]
+
+___________________________________________________
+
+
+a.b.c: 8
+
+      :
+	 / \
+    .   8
+   / \
+  .   c
+ / \
+a   b
+
+
+___________________________________________________
+
+
+
+i: 0 | i<100 | i: i+1 @
+(
+	# do stuff
+)
+
+(i:0; i<100; i:i+1) @
+(
+	# do stuff
+)
+
+___________________________________________________
+
+
+myFunc :: {Int}.{Int} -> {Int}:
+(
+	print: right
+	print: left
+	print
+	
+	right>6 ?
+		left.myFunc: right-1
+	
+	8
+)
+
+myFunc :: Int.Int: Int
+(
+	print: right
+	print: left
+	print
+	
+	right>6 ?
+		left.myFunc: right-1
+	
+	8
+)
+
+___________________________________________________
+
+
+myObj: MyObj: 9, 3
+
+myPtr: &myObj
+
+myObj = myPtr ? (
+	# valid
+)
+
+myObj2 = myPtr.me
+
+___________________________________________________
+
+
+myObj: MyObj.new: 9, 3
+
+myPtr: myObj.ptr
+
+myObj = myPtr ? (
+	# valid
+)
+
+myObj2 = myPtr.me
+
+___________________________________________________
+
+myFunc :: String.Int -> Dub
+[
+	
+]
+
+a: 9.7
+b: int: a
+
+___________________________________________________
+
+var a
+
+a(c: 9, d: 3)
+
+___________________________________________________
+
+a: c 9, d 3
+
+___________________________________________________
+
+a: happy: MyClass
+b: MyClass
+b: a.diff
+___________________________________________________
+

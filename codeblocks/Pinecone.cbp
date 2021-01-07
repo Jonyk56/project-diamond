@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Pinecone" />
+		<Option pch_mode="2" />
+		<Option default_target="Release" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug_R">
+				<Option output="../pinecone" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="other/pinecone.pn -d -r" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Debug_E">
+				<Option output="../pinecone" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="other/pinecone.pn -d -e" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Test">
+				<Option output="../pinecone" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="tests/run_tests.pn" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../pinecone" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-v" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O" />
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../h/Action.h" />
+		<Unit filename="../h/AllOperators.h" />
+		<Unit filename="../h/AstNode.h" />
+		<Unit filename="../h/CppProgram.h" />
+		<Unit filename="../h/ErrorHandler.h" />
+		<Unit filename="../h/Namespace.h" />
+		<Unit filename="../h/Operator.h" />
+		<Unit filename="../h/PineconeProgram.h" />
+		<Unit filename="../h/SourceFile.h" />
+		<Unit filename="../h/StackFrame.h" />
+		<Unit filename="../h/Token.h" />
+		<Unit filename="../h/Type.h" />
+		<Unit filename="../h/VERSION.h" />
+		<Unit filename="../h/msclStringFuncs.h" />
+		<Unit filename="../h/utils/fileUtils.h" />
+		<Unit filename="../h/utils/stringArray.h" />
+		<Unit filename="../h/utils/stringDrawing.h" />
+		<Unit filename="../h/utils/stringNumConversion.h" />
+		<Unit filename="../h/utils/stringUtils.h" />
+		<Unit filename="../other/pinecone.pn" />
+		<Unit filename="../other/pinecone_concept.txt" />
+		<Unit filename="../readme.md" />
+		<Unit filename="../src/Actions/Action.cpp" />
+		<Unit filename="../src/Actions/BoolOpAction.cpp" />
+		<Unit filename="../src/Actions/BranchAction.cpp" />
+		<Unit filename="../src/Actions/FunctionAction.cpp" />
+		<Unit filename="../src/Actions/IfAction.cpp" />
+		<Unit filename="../src/Actions/ListAction.cpp" />
+		<Unit filename="../src/Actions/LoopAction.cpp" />
+		<Unit filename="../src/Actions/MakeTupleAction.cpp" />
+		<Unit filename="../src/Actions/TypeAction.cpp" />
+		<Unit filename="../src/Actions/VarAction.cpp" />
+		<Unit filename="../src/AllOperators.cpp" />
+		<Unit filename="../src/AstNode.cpp" />
+		<Unit filename="../src/CppProgram.cpp" />
+		<Unit filename="../src/ErrorHandler.cpp" />
+		<Unit filename="../src/Lexer.cpp" />
+		<Unit filename="../src/Namespace.cpp" />
+		<Unit filename="../src/Parser.cpp" />
+		<Unit filename="../src/PineconeProgram.cpp" />
+		<Unit filename="../src/PineconeStdLib.cpp" />
+		<Unit filename="../src/ResolveLiteral.cpp" />
+		<Unit filename="../src/SourceFile.cpp" />
+		<Unit filename="../src/StackFrame.cpp" />
+		<Unit filename="../src/Token.cpp" />
+		<Unit filename="../src/Type.cpp" />
+		<Unit filename="../src/main.cpp" />
+		<Unit filename="../src/msclStringFuncs.cpp" />
+		<Unit filename="../src/utils/fileUtils.cpp" />
+		<Unit filename="../src/utils/stringArray.cpp" />
+		<Unit filename="../src/utils/stringDrawing.cpp" />
+		<Unit filename="../src/utils/stringNumConversion.cpp" />
+		<Unit filename="../src/utils/stringUtils.cpp" />
+		<Unit filename="../tests/run_tests.pn" />
+		<Unit filename="../tutorials/0_setting_up.md" />
+		<Unit filename="../tutorials/1_basic_concepts.md" />
+		<Unit filename="../tutorials/2_control_flow.md" />
+		<Unit filename="../tutorials/3_strings_and_input.md" />
+		<Unit filename="../tutorials/4_structures_and_functions.md" />
+		<Unit filename="../tutorials/5_transpiling_to_cpp.md" />
+		<Unit filename="../tutorials/6_temporary_hacks.md" />
+		<Unit filename="../tutorials/index.md" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

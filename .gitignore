@@ -1,0 +1,27 @@
+
+# object files
+*.o
+
+# codeblocks project files
+*.layout
+*.depend
+*.cscope_file_list
+
+# Valgrind
+*cachegrind.out*
+*ValgrindOut.xml
+
+# executables
+PineconeDbg
+PineconeBin
+Pinecone
+pinecone
+
+#KDevelop
+.kdev4
+
+# stupid OSX stuff
+*.DS_Store
+
+# repl temp file
+repl/tmp.pn

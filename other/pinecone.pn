@@ -1,0 +1,6 @@
+
+print: argLen.String + " args:"
+
+i: 0 | i < argLen | i: i + 1 @ (
+	print: arg: i
+)
